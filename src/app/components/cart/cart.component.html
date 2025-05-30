@@ -1,0 +1,12 @@
+<div class="cart-section">
+  <button (click)="viewCart()">View Cart</button>
+  <div *ngIf="cartItems.length > 0">
+    <h3>Your Cart</h3>
+    <ul class="cart-list">
+      <li *ngFor="let item of cartItems">
+        {{ item.product.name }} × {{ item.quantity }}
+      </li>
+    </ul>
+    <button (click)="checkout()">Checkout</button>
+  </div>
+</div>
